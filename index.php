@@ -6,7 +6,7 @@
  * Time: 9:06 PM
  */
 
-class main
+class index
 {
 
 }
