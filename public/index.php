@@ -7,7 +7,7 @@
  * Time: 9:23 PM
  */
 main::start("example.csv");
-class main  {
+/*class main  {
     static public function start($filename) {
         $records = csv::getRecords($filename);
         $table = html::generateTable($records);
