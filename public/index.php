@@ -13,9 +13,9 @@ class main
 
 class csv
 {
-    static public function getRecords($filename)
+    static public function getRecords($example.csv)
     {
-        $file = fopen($filename,"r");
+        $file = fopen($example.csv,"r");
         $fieldNames = array();
         $count = 0;
         while(! feof($file))
@@ -69,6 +69,8 @@ class html
 {
     public static function generateTable($records) {
         $count = 0;
+
+        print_r($records)
         foreach ($records as $record) {
             if($count == 0) {
                 $array = $record->returnArray();
