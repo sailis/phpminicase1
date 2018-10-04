@@ -90,8 +90,7 @@ class html
 
 class system
 {
- print_r($table)
-
+system :: printPage($table);
 
 
 }
