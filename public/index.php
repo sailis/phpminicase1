@@ -4,9 +4,9 @@
 main::start("example.csv");
 class main
 {
-    static public function start($filename)
+    static public function start($example.csv)
     {
-        $records = csv::getRecords($filename);
+        $records = csv::getRecords('$example.csv');
         $table = html::generateTable($records);
     }
 }
