@@ -8,32 +8,24 @@
 
 class html
 {
-    function array2Html($array, $table = true)
-    {
-        $out = '';
-        foreach ($array as $key => $value) {
-            if (is_array($value)) {
-                if (!isset($tableHeader)) {
-                    $tableHeader =
-                        '<th>' .
-                        implode('</th><th>', array_keys($value)) .
-                        '</th>';
-                }
-                array_keys($value);
-                $out .= '<tr>';
-                $out .= array2Html($value, false);
-                $out .= '</tr>';
+    public static function generateTable($records) {
+        $count = 0;
+        foreach ($records as $record) {
+            if($count == 0) {
+                $array = $record->returnArray();
+                $fields = array_keys($array);
+                $values = array_values($array);
+                print_r($fields);
+                print_r($values);
             } else {
-                $out .= "<td>$value</td>";
+                $array = $record->returnArray();
+                $values = array_values($array);
+                print_r($values);
             }
-        }
-
-        if ($table) {
-            return '<table>' . $tableHeader . $out . '</table>';
-        } else {
-            return $out;
+            $count++;
         }
     }
+}
 
 
 
