@@ -1,14 +1,11 @@
 
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 10/1/18
- * Time: 9:23 PM
- */
+
 main::start("example.csv");
-class main  {
-    static public function start($filename) {
+class main
+{
+    static public function start($filename)
+    {
         $records = csv::getRecords($filename);
         $table = html::generateTable($records);
     }
@@ -16,7 +13,8 @@ class main  {
 
 class csv
 {
-    static public function getRecords($filename) {
+    static public function getRecords($filename)
+    {
         $file = fopen($filename,"r");
         $fieldNames = array();
         $count = 0;
@@ -54,6 +52,19 @@ class record
 }
 
 
+
+
+
+
+class recordFactory
+{
+    public static function create(Array $fieldNames = null, Array $values = null)
+    {
+        $record = new record($fieldNames, $values);
+        return $record;
+    }
+}
+
 class html
 {
     public static function generateTable($records) {
@@ -76,10 +87,11 @@ class html
 }
 
 
-class recordFactory
-{
-    public static function create(Array $fieldNames = null, Array $values = null) {
-        $record = new record($fieldNames, $values);
-        return $record;
-    }
 
+class system
+{
+ print_r($table)
+
+
+
+}
