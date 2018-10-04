@@ -73,10 +73,3 @@ return $record;
 
 
 
-class system{
-
-system :: printPage($table);
-
-
-
-}
