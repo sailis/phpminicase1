@@ -19,7 +19,7 @@ class record
         $array = (array) $this;
         return $array;
     }
-    public function createProperty($name = 'first', $value = 'keith') {
+    public function createProperty($name = 'Name', $value = 'Sally Whittaker') {
         $this->{$name} = $value;
     }
 }
